@@ -1,0 +1,28 @@
+.team {
+  &__container {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 50px;
+  }
+
+  &__header {
+    padding: 40px;
+    text-align: center;
+  }
+
+  &__content {
+    @include flex(space-around, center, row);
+
+    &_teammate {
+      text-align: center;
+    }
+
+    &_teammate-name {
+      padding: 10px 0;
+    }
+
+    &_teammate-position {
+      @include font($font-bold, 24px, 36px, $light-gray);
+    }
+  }
+}

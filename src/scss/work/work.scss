@@ -1,0 +1,56 @@
+.work {
+  &__container {
+    max-width: 880px;
+    @include flex(space-between, center, row);
+    margin: 0 auto;
+    padding: 50px;
+  }
+
+  &__header {
+    padding-bottom: 40px;
+  }
+
+  &__image-container {
+    position: relative;
+    margin-right: 40px;
+
+    &_image {
+      position: absolute;
+      box-sizing: border-box;
+    }
+
+    &_title {
+      position: absolute;
+      top: 26px;
+      right: 30px;
+      padding: 20px 32px;
+      @include font($font-regular, 18px, 20px, $black);
+      background: $white;
+    }
+  }
+
+  &__content {
+    max-width: 325px;
+  }
+
+  &__competence-list_item {
+    &:not(:last-child) {
+      padding-bottom: 20px;
+    }
+
+    &_header {
+      @include font($font-bold, 16px, 24px, $gray);
+      display: flex;
+
+      &_icon {
+        margin-right: 15px;
+      }
+    }
+
+    &_info {
+      padding-left: 30px;
+      @include font($font-regular, 12px, 24px, $gray);
+      color: #5e5b5b;
+    }
+  }
+}

@@ -1,0 +1,92 @@
+.contact {
+  &__container {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 50px;
+    @include flex(space-around, center, row);
+  }
+
+  &__header {
+    padding-bottom: 15px;
+    text-align: center;
+  }
+
+  &__location {
+    padding: 0 25px 12px;
+
+    &_block {
+      position: relative;
+    }
+
+    &_map {
+      width: 360px;
+    }
+
+    &_content {
+      position: absolute;
+      top: 12px;
+      left: 14px;
+      z-index: 1;
+      padding: 12px 70px 12px 20px;
+      width: 220px;
+      background: white;
+    }
+
+    &_content-name {
+      @include font($font-bold, 24px, 36px, $gray);
+    }
+
+    &_content-address {
+      @include font($font-bold, 12px, 24px, $gray);
+    }
+  }
+
+  &__company {
+    padding: 0 25px 31px;
+
+    &_list_item {
+      @include flex(start, start, column);
+      @include font($font-medium, 16px, 34px, $light-gray);
+
+      &:hover {
+        text-decoration: underline;
+        color: $gray;
+      }
+    }
+  }
+
+  &__networks {
+    padding: 0 25px 15px;
+    @include flex(start, start, column);
+
+    &_link {
+      padding: 8px;
+
+      @include font($font-medium, 16px, 34px, $light-gray);
+
+      &_icon {
+        padding-right: 10px;
+      }
+      &_label {
+        position: relative;
+        bottom: 5px;
+
+        &:hover {
+          text-decoration: underline;
+          color: $gray;
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
+    height: 70px;
+
+    h5 {
+      padding-top: 23px;
+      padding-left: 108px;
+      @include font($font-medium, 14px, 24px, $gray);
+    }
+  }
+}

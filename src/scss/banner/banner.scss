@@ -1,0 +1,44 @@
+.banner {
+  position: relative;
+  display: flex;
+  margin-bottom: 60px;
+
+  &__container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 100%;
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0 50px;
+  }
+
+  &__content {
+    &_header {
+      margin-bottom: 50px;
+    }
+
+    &_description {
+      display: flex;
+    }
+
+    &_play-btn {
+      border: none;
+      background: transparent;
+      position: relative;
+      right: 10px;
+    }
+
+    &_info {
+      width: 245px;
+      @include font($font-regular, 14px, 24px, $gray);
+      font-weight: 300;
+    }
+  }
+
+  &__image {
+    width: 100%;
+  }
+}

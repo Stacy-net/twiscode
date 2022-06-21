@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Poppins Regular';
+  src: url('/src/fonts/Poppins-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+$font-regular: 'Poppins Regular', sans-serif;
+@font-face {
+  font-family: 'Poppins Medium';
+  src: url('/src/fonts/Poppins-Medium.ttf');
+  font-weight: 500;
+  font-style: normal;
+}
+
+$font-medium: 'Poppins Medium', sans-serif;
+@font-face {
+  font-family: 'Poppins SemiBold';
+  src: url('/src/fonts/Poppins-SemiBold.ttf');
+  font-weight: 600;
+  font-style: normal;
+}
+$font-bold: 'Poppins SemiBold', sans-serif;

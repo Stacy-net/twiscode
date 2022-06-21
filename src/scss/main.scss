@@ -1,0 +1,22 @@
+@import './help/fonts.scss';
+@import './help/media_mixins.scss';
+@import './help/normalize.scss';
+@import './help/vars_and_mixins.scss';
+@import './header/header.scss';
+@import './banner/banner.scss';
+@import './work/work.scss';
+@import './service/service.scss';
+@import './customers/customers.scss';
+@import './team/team.scss';
+@import './career/career.scss';
+@import './footer/footer.scss';
+
+h1 {
+  @include font($font-bold, 64px, 72px, $gray);
+}
+h2 {
+  @include font($font-bold, 36px, 45px, $gray);
+}
+h3 {
+  @include font($font-bold, 24px, 36px, $gray);
+}
