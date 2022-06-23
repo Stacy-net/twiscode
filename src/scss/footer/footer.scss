@@ -4,15 +4,31 @@
     margin: 0 auto;
     padding: 50px;
     @include flex(space-around, center, row);
+
+    @include tablet {
+      padding: 50px 25px;
+    }
   }
 
   &__header {
     padding-bottom: 15px;
     text-align: center;
+
+    @include tablet_md {
+      padding-bottom: 10px;
+    }
   }
 
   &__location {
     padding: 0 25px 12px;
+
+    @include tablet {
+      padding: 0 18px 12px;
+    }
+
+    @include tablet_md {
+      padding: 0 21px 12px;
+    }
 
     &_block {
       position: relative;
@@ -20,6 +36,14 @@
 
     &_map {
       width: 360px;
+
+      @include tablet {
+        width: 320px;
+      }
+
+      @include tablet_md {
+        width: 300px;
+      }
     }
 
     &_content {
@@ -30,23 +54,51 @@
       padding: 12px 70px 12px 20px;
       width: 220px;
       background: white;
+
+      @include tablet_md {
+        width: 180px;
+      }
     }
 
     &_content-name {
       @include font($font-bold, 24px, 36px, $gray);
+
+      @include tablet_md {
+        font-size: 18px;
+        line-height: 24px;
+      }
     }
 
     &_content-address {
       @include font($font-bold, 12px, 24px, $gray);
+
+      @include tablet_md {
+        font-size: 10px;
+        line-height: 16px;
+      }
     }
   }
 
   &__company {
     padding: 0 25px 31px;
 
+    @include tablet_md {
+      padding-bottom: 34px;
+    }
+
     &_list_item {
       @include flex(start, start, column);
       @include font($font-medium, 16px, 34px, $light-gray);
+
+      @include tablet {
+        font-size: 14px;
+        line-height: 30px;
+      }
+
+      @include tablet_md {
+        font-size: 14px;
+        line-height: 26px;
+      }
 
       &:hover {
         text-decoration: underline;
@@ -59,13 +111,36 @@
     padding: 0 25px 15px;
     @include flex(start, start, column);
 
+    @include tablet {
+      padding: 0 10px 18px;
+    }
+
+    @include tablet_md {
+      padding: 0 16px 21px;
+    }
+
     &_link {
       padding: 8px;
 
       @include font($font-medium, 16px, 34px, $light-gray);
 
+      @include tablet {
+        font-size: 14px;
+        line-height: 24px;
+      }
+
+      @include tablet_md {
+        font-size: 14px;
+        line-height: 24px;
+        padding: 6px 0;
+      }
+
       &_icon {
         padding-right: 10px;
+
+        @include tablet_md {
+          padding-right: 5px;
+        }
       }
       &_label {
         position: relative;
@@ -87,6 +162,11 @@
       padding-top: 23px;
       padding-left: 108px;
       @include font($font-medium, 14px, 24px, $gray);
+
+      @include tablet_md {
+        padding-left: 60px;
+        font-size: 12px;
+      }
     }
   }
 }

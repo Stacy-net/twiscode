@@ -8,6 +8,11 @@
     &_header {
       margin-bottom: 20px;
       @include font($font-bold, 36px, 42px, $black);
+
+      @include tablet_md {
+        font-size: 28px;
+        line-height: 36px;
+      }
     }
   }
   &__invitation_apply {
@@ -17,14 +22,24 @@
       margin-bottom: 30px;
       text-align: justify;
       width: 350px;
-      // width: 24vw;
       @include font($font-regular, 18px, 24px, $black);
+
+      @include tablet_md {
+        font-size: 14px;
+        width: 240px;
+        margin-bottom: 15px;
+      }
     }
 
     &_btn {
       padding: 11px 48px;
       background: #414141;
       @include font($font-regular, 18px, 24px, $white);
+
+      @include tablet_md {
+        padding: 8px 38px;
+        font-size: 14px;
+      }
 
       &:hover {
         background: $light-gray;

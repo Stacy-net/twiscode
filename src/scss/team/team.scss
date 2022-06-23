@@ -23,6 +23,11 @@
 
     &_teammate-position {
       @include font($font-bold, 24px, 36px, $light-gray);
+
+      @include tablet_md {
+        font-size: 18px;
+        line-height: 24px;
+      }
     }
   }
 }

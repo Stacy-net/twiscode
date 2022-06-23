@@ -8,11 +8,19 @@
 
   &__header {
     padding-bottom: 40px;
+
+    @include tablet_md {
+      padding-bottom: 20px;
+    }
   }
 
   &__image-container {
     position: relative;
     margin-right: 40px;
+
+    @include tablet_md {
+      margin-right: 15px;
+    }
 
     &_image {
       position: absolute;
@@ -42,6 +50,10 @@
       @include font($font-bold, 16px, 24px, $gray);
       display: flex;
 
+      @include tablet_md {
+        font-size: 14px;
+      }
+
       &_icon {
         margin-right: 15px;
       }
@@ -51,6 +63,12 @@
       padding-left: 30px;
       @include font($font-regular, 12px, 24px, $gray);
       color: #5e5b5b;
+
+      @include tablet_md {
+        font-size: 10px;
+        line-height: 18px;
+        text-align: justify;
+      }
     }
   }
 }

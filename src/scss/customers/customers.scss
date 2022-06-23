@@ -3,6 +3,10 @@
     max-width: 880px;
     margin: 0 auto;
     padding: 50px;
+
+    @include tablet_md {
+      max-width: 680px;
+    }
   }
 
   &__header {

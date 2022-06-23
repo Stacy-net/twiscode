@@ -1,2 +1,9 @@
+# OSX
+#
+.DS_Store
+
 /node_modules
 /build
+
+.idea
+.vscode/

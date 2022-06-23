@@ -1,34 +1,45 @@
 .service {
+  position: relative;
+  display: flex;
+  margin: 60px 0;
+
   &__container {
-    position: relative;
-    @include flex(flex-end, center, row);
-    height: 550px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 100%;
+    max-width: 880px;
     margin: 0 auto;
-    padding: 0 0 50px 70px;
+    padding: 0 50px;
   }
 
   &__content {
     width: 508px;
-    height: 283px;
-    // position: relative;
-    // left: 25%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -60%);
-    z-index: 1;
     padding: 28px 50px;
     background: white;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
 
+    @include tablet_md {
+      width: 350px;
+    }
     &_header {
       padding-top: 30px;
+
+      @include tablet_md {
+        padding-top: 15px;
+      }
     }
 
     &_info {
       padding: 30px 0;
       width: 240px;
       @include font($font-medium, 18px, 24px, $light-gray);
+
+      @include tablet_md {
+        padding: 15px 0;
+      }
     }
 
     &_btn {
@@ -40,5 +51,9 @@
         background: $light-gray;
       }
     }
+  }
+  &__image-container {
+    @include flex(flex-end, center, row);
+    width: 100%;
   }
 }

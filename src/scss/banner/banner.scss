@@ -35,6 +35,12 @@
       width: 245px;
       @include font($font-regular, 14px, 24px, $gray);
       font-weight: 300;
+
+      @include tablet_md {
+        font-size: 12px;
+        line-height: 20px;
+        width: 185px;
+      }
     }
   }
 
