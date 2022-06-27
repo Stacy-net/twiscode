@@ -6,6 +6,10 @@
     margin: 0 auto;
     padding: 0 50px;
 
+    @include tablet {
+      padding: 0 25px;
+    }
+
     .header__content_nav_btn {
       @include font($font-medium, 14px, 24px, $black);
 

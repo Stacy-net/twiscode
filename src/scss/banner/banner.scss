@@ -13,6 +13,10 @@
     max-width: $max-width;
     margin: 0 auto;
     padding: 0 50px;
+
+    @include tablet {
+      padding: 50px 25px;
+    }
   }
 
   &__content {
@@ -35,11 +39,17 @@
       width: 245px;
       @include font($font-regular, 14px, 24px, $gray);
       font-weight: 300;
+      text-shadow: 0.5px 0.5px 0.5px #f8f8f8;
+
+      @include tablet {
+        font-size: 13px;
+        width: 210px;
+      }
 
       @include tablet_md {
         font-size: 12px;
         line-height: 20px;
-        width: 185px;
+        width: 190px;
       }
     }
   }

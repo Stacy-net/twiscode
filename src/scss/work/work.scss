@@ -4,19 +4,27 @@
     @include flex(space-between, center, row);
     margin: 0 auto;
     padding: 50px;
+
+    @include tablet {
+      padding: 50px 25px;
+    }
   }
 
   &__header {
-    padding-bottom: 40px;
+    padding-bottom: 30px;
 
     @include tablet_md {
-      padding-bottom: 20px;
+      padding-bottom: 25px;
     }
   }
 
   &__image-container {
     position: relative;
-    margin-right: 40px;
+    margin-right: 30px;
+
+    @include tablet {
+      margin-right: 20px;
+    }
 
     @include tablet_md {
       margin-right: 15px;
@@ -63,11 +71,16 @@
       padding-left: 30px;
       @include font($font-regular, 12px, 24px, $gray);
       color: #5e5b5b;
+      text-align: justify;
+
+      // @include tablet {
+      //   font-size: 11px;
+      //   line-height: 20px;
+      // }
 
       @include tablet_md {
-        font-size: 10px;
+        font-size: 11px;
         line-height: 18px;
-        text-align: justify;
       }
     }
   }
