@@ -6,7 +6,7 @@
     padding: 50px;
 
     @include tablet {
-      padding: 50px 25px;
+      padding: 30px 25px;
     }
   }
 
@@ -14,31 +14,35 @@
     padding-bottom: 30px;
 
     @include tablet_md {
-      padding-bottom: 25px;
+      padding-bottom: 21px;
+    }
+
+    @include tablet_sm {
+      padding-bottom: 15px;
     }
   }
 
   &__image-container {
     position: relative;
     margin-right: 30px;
+    width: 50%;
 
     @include tablet {
-      margin-right: 20px;
-    }
-
-    @include tablet_md {
       margin-right: 15px;
     }
 
+    @include tablet_sm {
+      width: 45%;
+    }
+
     &_image {
-      position: absolute;
-      box-sizing: border-box;
+      width: 100%;
     }
 
     &_title {
       position: absolute;
-      top: 26px;
-      right: 30px;
+      top: 0;
+      right: 0;
       padding: 20px 32px;
       @include font($font-regular, 18px, 20px, $black);
       background: $white;
@@ -47,11 +51,20 @@
 
   &__content {
     max-width: 325px;
+    width: 50%;
+
+    @include tablet_sm {
+      width: 45%;
+    }
   }
 
   &__competence-list_item {
     &:not(:last-child) {
       padding-bottom: 20px;
+
+      @include tablet_sm {
+        padding-bottom: 10px;
+      }
     }
 
     &_header {
@@ -60,6 +73,9 @@
 
       @include tablet_md {
         font-size: 14px;
+      }
+      @include tablet_sm {
+        font-size: 12px;
       }
 
       &_icon {
@@ -73,14 +89,13 @@
       color: #5e5b5b;
       text-align: justify;
 
-      // @include tablet {
-      //   font-size: 11px;
-      //   line-height: 20px;
-      // }
-
       @include tablet_md {
         font-size: 11px;
         line-height: 18px;
+      }
+
+      @include tablet_sm {
+        font-size: 10px;
       }
     }
   }

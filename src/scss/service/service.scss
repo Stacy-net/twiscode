@@ -31,6 +31,11 @@
 
     @include tablet_md {
       width: 350px;
+      padding: 23px 30px;
+    }
+
+    @include tablet_sm {
+      width: 300px;
     }
     &_header {
       padding-top: 30px;
@@ -52,8 +57,13 @@
         font-size: 16px;
         padding: 20px 0;
       }
+
       @include tablet_md {
         padding: 15px 0;
+      }
+
+      @include tablet_sm {
+        font-size: 14px;
       }
     }
 
@@ -64,6 +74,11 @@
 
       &:hover {
         background: $light-gray;
+      }
+
+      @include tablet_sm {
+        padding: 10px 25px;
+        font-size: 13px;
       }
     }
   }

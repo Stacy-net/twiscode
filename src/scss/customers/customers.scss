@@ -6,12 +6,8 @@
 
     @include tablet {
       max-width: 620px;
-      padding: 50px 25px;
+      padding: 30px 25px;
     }
-
-    // @include tablet_md {
-    //   max-width: 680px;
-    // }
   }
 
   &__header {

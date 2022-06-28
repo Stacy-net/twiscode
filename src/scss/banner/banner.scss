@@ -15,7 +15,7 @@
     padding: 0 50px;
 
     @include tablet {
-      padding: 50px 25px;
+      padding: 30px 25px;
     }
   }
 
@@ -33,6 +33,10 @@
       background: transparent;
       position: relative;
       right: 10px;
+
+      @include tablet_md {
+        width: 60px;
+      }
     }
 
     &_info {
@@ -47,9 +51,16 @@
       }
 
       @include tablet_md {
-        font-size: 12px;
+        font-size: 11px;
         line-height: 20px;
         width: 190px;
+      }
+
+      @include tablet_sm {
+        font-size: 10px;
+        line-height: 16px;
+        width: 160px;
+        padding-top: 10px;
       }
     }
   }
