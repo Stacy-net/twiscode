@@ -10,7 +10,7 @@
   }
 
   &__header {
-    padding: 40px;
+    padding-bottom: 40px;
     text-align: center;
 
     @include tablet_sm {
@@ -27,6 +27,15 @@
 
     &_teammate {
       text-align: center;
+    }
+
+    &_teammate-img {
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+      @include tablet_md {
+        width: 90%;
+      }
     }
 
     &_teammate-name {

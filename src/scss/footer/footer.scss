@@ -3,20 +3,15 @@
     max-width: $max-width;
     margin: 0 auto;
     padding: 50px 50px 30px;
-    @include flex(space-around, flex-start, row);
+    @include flex(space-between, flex-start, row);
 
     @include tablet {
       padding: 30px 25px;
-    }
-
-    @include tablet_sm {
-      justify-content: space-between;
     }
   }
 
   &__header {
     padding-bottom: 15px;
-    text-align: center;
 
     @include tablet_md {
       padding-bottom: 10px;
@@ -24,7 +19,7 @@
   }
 
   &__location {
-    width: 22%;
+    max-width: 360px;
     padding-right: 25px;
 
     @include tablet {
@@ -35,8 +30,8 @@
       padding-right: 12px;
     }
 
-    @include tablet_sm {
-      width: 35%;
+    &_title {
+      text-align: center;
     }
 
     &_block {
@@ -44,19 +39,7 @@
     }
 
     &_map {
-      width: 330px;
-
-      @include tablet {
-        width: 270px;
-      }
-
-      @include tablet_md {
-        width: 240px;
-      }
-
-      @include tablet_sm {
-        width: 220px;
-      }
+      width: 100%;
     }
 
     &_content {
@@ -120,7 +103,7 @@
   }
 
   &__company {
-    width: 11%;
+    width: 122px;
     padding-right: 25px;
 
     @include tablet {
@@ -129,10 +112,6 @@
 
     @include tablet_md {
       padding-right: 12px;
-    }
-
-    @include tablet_sm {
-      width: 15%;
     }
 
     &_list_item {
@@ -163,15 +142,7 @@
   }
 
   &__networks {
-    width: 14%;
-
-    @include tablet_sm {
-      width: 30%;
-    }
-
-    &_header {
-      text-align: start;
-    }
+    width: 200px;
 
     &_link {
       padding: 8px 0;
@@ -234,10 +205,11 @@
 
       @include tablet_md {
         font-size: 12px;
+        padding-left: 40px;
       }
 
       @include tablet_sm {
-        padding-left: 30px;
+        padding-left: 25px;
       }
     }
   }

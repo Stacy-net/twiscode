@@ -10,6 +10,10 @@
       padding: 0 25px;
     }
 
+    @include tablet_md {
+      height: 80px;
+    }
+
     .header__content_nav_btn {
       @include font($font-medium, 14px, 24px, $black);
 
