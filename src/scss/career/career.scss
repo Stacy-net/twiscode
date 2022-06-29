@@ -11,7 +11,6 @@
   }
   &__invitation {
     width: 50%;
-    margin-left: 20px;
 
     &_header {
       margin-bottom: 20px;
@@ -37,7 +36,11 @@
   }
   &__invitation_apply {
     width: 50%;
-    margin-left: 60px;
+    margin-left: 50px;
+
+    @include tablet_md {
+      margin-left: 25px;
+    }
 
     &_info {
       margin-bottom: 30px;
