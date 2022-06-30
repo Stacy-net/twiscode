@@ -94,4 +94,8 @@
       width: 100%;
     }
   }
+  &__image-container {
+    @include flex(flex-end, center, row);
+    width: 100%;
+  }
 }
