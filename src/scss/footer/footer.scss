@@ -2,24 +2,44 @@
   &__container {
     max-width: $max-width;
     margin: 0 auto;
-    padding: 50px;
-    @include flex(space-around, center, row);
+    padding: 50px 50px 30px;
+    @include flex(space-between, flex-start, row);
+
+    @include tablet {
+      padding: 30px 25px;
+    }
   }
 
   &__header {
     padding-bottom: 15px;
-    text-align: center;
+
+    @include tablet_md {
+      padding-bottom: 10px;
+    }
   }
 
   &__location {
-    padding: 0 25px 12px;
+    max-width: 360px;
+    margin-right: 20px;
+
+    // @include tablet {
+    //   margin-right: 18px;
+    // }
+
+    // @include tablet_md {
+    //   margin-right: 12px;
+    // }
+
+    &_title {
+      text-align: center;
+    }
 
     &_block {
       position: relative;
     }
 
     &_map {
-      width: 360px;
+      width: 100%;
     }
 
     &_content {
@@ -30,23 +50,92 @@
       padding: 12px 70px 12px 20px;
       width: 220px;
       background: white;
+
+      @include tablet {
+        width: 200px;
+      }
+
+      @include tablet_md {
+        width: 180px;
+      }
+
+      @include tablet_sm {
+        width: 150px;
+      }
     }
 
     &_content-name {
       @include font($font-bold, 24px, 36px, $gray);
+
+      @include tablet {
+        font-size: 21px;
+        line-height: 28px;
+      }
+
+      @include tablet_md {
+        font-size: 18px;
+        line-height: 24px;
+      }
+
+      @include tablet_sm {
+        font-size: 14px;
+        line-height: 18px;
+      }
     }
 
     &_content-address {
       @include font($font-bold, 12px, 24px, $gray);
+
+      @include tablet {
+        font-size: 11px;
+        line-height: 16px;
+      }
+
+      @include tablet_md {
+        font-size: 10px;
+        line-height: 16px;
+      }
+
+      @include tablet_sm {
+        line-height: 14px;
+      }
     }
   }
 
   &__company {
-    padding: 0 25px 31px;
+    width: 122px;
+    margin-right: 20px;
+    flex-shrink: 0;
+
+    // @include tablet {
+    //   padding-right: 18px;
+    //   width: 100px;
+    // }
+
+    // @include tablet_md {
+    //   padding-right: 12px;
+    //   width: 80px;
+    // }
 
     &_list_item {
-      @include flex(start, start, column);
+      @include flex(center, flex-start, column);
+
       @include font($font-medium, 16px, 34px, $light-gray);
+
+      @include tablet {
+        font-size: 14px;
+        line-height: 30px;
+      }
+
+      @include tablet_md {
+        font-size: 14px;
+        line-height: 26px;
+      }
+
+      @include tablet_sm {
+        font-size: 12px;
+        line-height: 21px;
+      }
 
       &:hover {
         text-decoration: underline;
@@ -56,16 +145,54 @@
   }
 
   &__networks {
-    padding: 0 25px 15px;
-    @include flex(start, start, column);
+    width: 200px;
+    flex-shrink: 0;
+
+    @include tablet {
+      width: 185px;
+    }
+
+    @include tablet_md {
+      width: 160px;
+    }
+
+    @include tablet_sm {
+      width: 150px;
+    }
 
     &_link {
-      padding: 8px;
+      padding: 8px 0;
+
+      @include flex(start, start, row);
 
       @include font($font-medium, 16px, 34px, $light-gray);
 
+      @include tablet {
+        font-size: 14px;
+        line-height: 24px;
+      }
+
+      @include tablet_md {
+        font-size: 14px;
+        line-height: 24px;
+        padding: 6px 0;
+      }
+
+      @include tablet_sm {
+        font-size: 12px;
+        line-height: 21px;
+      }
+
       &_icon {
         padding-right: 10px;
+
+        @include tablet_md {
+          padding-right: 5px;
+        }
+
+        @include tablet_sm {
+          width: 18px;
+        }
       }
       &_label {
         position: relative;
@@ -87,6 +214,19 @@
       padding-top: 23px;
       padding-left: 108px;
       @include font($font-medium, 14px, 24px, $gray);
+
+      @include tablet {
+        padding-left: 60px;
+      }
+
+      @include tablet_md {
+        font-size: 12px;
+        padding-left: 40px;
+      }
+
+      @include tablet_sm {
+        padding-left: 25px;
+      }
     }
   }
 }

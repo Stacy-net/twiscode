@@ -4,25 +4,43 @@
     @include flex(space-between, center, row);
     margin: 0 auto;
     padding: 50px;
+
+    @include tablet {
+      padding: 30px 25px;
+    }
   }
 
   &__header {
-    padding-bottom: 40px;
+    padding-bottom: 30px;
+
+    @include tablet_md {
+      padding-bottom: 21px;
+    }
+
+    @include tablet_sm {
+      padding-bottom: 15px;
+    }
   }
 
   &__image-container {
     position: relative;
-    margin-right: 40px;
+    margin-right: 50px;
+    width: 50%;
+
+    @include tablet {
+      margin-right: 25px;
+    }
 
     &_image {
-      position: absolute;
-      box-sizing: border-box;
+      width: 100%;
+      box-shadow: 0px 4px 30px #e5e5e5;
+      border-radius: 10px;
     }
 
     &_title {
       position: absolute;
-      top: 26px;
-      right: 30px;
+      top: 0;
+      right: 0;
       padding: 20px 32px;
       @include font($font-regular, 18px, 20px, $black);
       background: $white;
@@ -30,17 +48,28 @@
   }
 
   &__content {
-    max-width: 325px;
+    width: 50%;
   }
 
   &__competence-list_item {
     &:not(:last-child) {
       padding-bottom: 20px;
+
+      @include tablet_sm {
+        padding-bottom: 10px;
+      }
     }
 
     &_header {
       @include font($font-bold, 16px, 24px, $gray);
       display: flex;
+
+      @include tablet_md {
+        font-size: 14px;
+      }
+      @include tablet_sm {
+        font-size: 12px;
+      }
 
       &_icon {
         margin-right: 15px;
@@ -51,6 +80,16 @@
       padding-left: 30px;
       @include font($font-regular, 12px, 24px, $gray);
       color: #5e5b5b;
+      text-align: justify;
+
+      @include tablet_md {
+        font-size: 11px;
+        line-height: 18px;
+      }
+
+      @include tablet_sm {
+        font-size: 10px;
+      }
     }
   }
 }

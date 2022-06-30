@@ -3,18 +3,39 @@
     max-width: 880px;
     margin: 0 auto;
     padding: 50px;
+
+    @include tablet {
+      padding: 30px 25px;
+    }
   }
 
   &__header {
-    padding: 40px;
+    padding-bottom: 40px;
     text-align: center;
+
+    @include tablet_sm {
+      padding: 20px;
+    }
   }
 
   &__content {
     @include flex(space-around, center, row);
 
+    @include tablet_sm {
+      @include flex(space-around, center, column);
+    }
+
     &_teammate {
       text-align: center;
+    }
+
+    &_teammate-img {
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+      @include tablet_md {
+        width: 90%;
+      }
     }
 
     &_teammate-name {
@@ -23,6 +44,16 @@
 
     &_teammate-position {
       @include font($font-bold, 24px, 36px, $light-gray);
+
+      @include tablet_md {
+        font-size: 18px;
+        line-height: 24px;
+      }
+
+      @include tablet_sm {
+        padding-bottom: 15px;
+        font-size: 14px;
+      }
     }
   }
 }
