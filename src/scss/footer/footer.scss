@@ -8,6 +8,10 @@
     @include tablet {
       padding: 30px 25px;
     }
+
+    @include mobile {
+      padding: 20px;
+    }
   }
 
   &__header {
@@ -21,14 +25,6 @@
   &__location {
     max-width: 360px;
     margin-right: 20px;
-
-    // @include tablet {
-    //   margin-right: 18px;
-    // }
-
-    // @include tablet_md {
-    //   margin-right: 12px;
-    // }
 
     &_title {
       text-align: center;
@@ -62,6 +58,16 @@
       @include tablet_sm {
         width: 150px;
       }
+
+      @include mobile {
+        padding: 8px 50px 8px 10px;
+        width: 120px;
+      }
+
+      @include mobile_md {
+        width: 100px;
+        padding: 5px 10px;
+      }
     }
 
     &_content-name {
@@ -81,6 +87,15 @@
         font-size: 14px;
         line-height: 18px;
       }
+
+      @include mobile {
+        font-size: 12px;
+        line-height: 14px;
+      }
+
+      @include mobile_md {
+        font-size: 11px;
+      }
     }
 
     &_content-address {
@@ -99,6 +114,11 @@
       @include tablet_sm {
         line-height: 14px;
       }
+
+      @include mobile {
+        font-size: 8px;
+        line-height: 10px;
+      }
     }
   }
 
@@ -112,10 +132,14 @@
     //   width: 100px;
     // }
 
-    // @include tablet_md {
-    //   padding-right: 12px;
-    //   width: 80px;
-    // }
+    @include mobile {
+      padding-right: 12px;
+      width: 70px;
+    }
+
+    @include mobile_md {
+      width: 65px;
+    }
 
     &_list_item {
       @include flex(center, flex-start, column);
@@ -135,6 +159,11 @@
       @include tablet_sm {
         font-size: 12px;
         line-height: 21px;
+      }
+
+      @include mobile_md {
+        font-size: 11px;
+        line-height: 18px;
       }
 
       &:hover {
@@ -160,6 +189,10 @@
       width: 150px;
     }
 
+    @include mobile {
+      width: 130px;
+    }
+
     &_link {
       padding: 8px 0;
 
@@ -183,6 +216,10 @@
         line-height: 21px;
       }
 
+      @include mobile {
+        font-size: 11px;
+        line-height: 16px;
+      }
       &_icon {
         padding-right: 10px;
 
@@ -202,6 +239,10 @@
           text-decoration: underline;
           color: $gray;
         }
+
+        @include mobile {
+          bottom: 1px;
+        }
       }
     }
   }
@@ -209,6 +250,10 @@
   &__copyright {
     box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
     height: 70px;
+
+    @include mobile {
+      height: 50px;
+    }
 
     h5 {
       padding-top: 23px;
@@ -226,6 +271,10 @@
 
       @include tablet_sm {
         padding-left: 25px;
+      }
+
+      @include mobile {
+        padding-top: 15px;
       }
     }
   }

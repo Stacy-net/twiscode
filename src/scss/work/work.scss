@@ -8,6 +8,11 @@
     @include tablet {
       padding: 30px 25px;
     }
+
+    @include mobile {
+      @include flex(space-between, center, column);
+      padding: 20px 40px;
+    }
   }
 
   &__header {
@@ -20,6 +25,10 @@
     @include tablet_sm {
       padding-bottom: 15px;
     }
+
+    @include mobile {
+      text-align: center;
+    }
   }
 
   &__image-container {
@@ -29,6 +38,12 @@
 
     @include tablet {
       margin-right: 25px;
+    }
+
+    @include mobile {
+      order: 1;
+      margin: 0 auto;
+      width: 60%;
     }
 
     &_image {
@@ -44,11 +59,22 @@
       padding: 20px 32px;
       @include font($font-regular, 18px, 20px, $black);
       background: $white;
+
+      @include mobile {
+        font-size: 14px;
+        line-height: 16px;
+        padding: 10px 15px;
+      }
     }
   }
 
   &__content {
     width: 50%;
+
+    @include mobile {
+      width: 100%;
+      margin-bottom: 20px;
+    }
   }
 
   &__competence-list_item {

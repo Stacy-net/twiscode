@@ -8,6 +8,10 @@
     @include tablet {
       padding: 30px 25px;
     }
+
+    @include mobile {
+      padding: 20px;
+    }
   }
   &__invitation {
     width: 50%;
@@ -62,6 +66,10 @@
       @include tablet_sm {
         font-size: 12px;
         line-height: 18px;
+      }
+
+      @include mobile {
+        line-height: 15px;
       }
     }
 

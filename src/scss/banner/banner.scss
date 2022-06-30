@@ -3,6 +3,10 @@
   display: flex;
   margin-bottom: 60px;
 
+  @include mobile {
+    margin-bottom: 20px;
+  }
+
   &__container {
     position: absolute;
     top: 50%;
@@ -17,15 +21,32 @@
     @include tablet {
       padding: 30px 25px;
     }
+
+    @include mobile {
+      padding: 30px 20px;
+    }
   }
 
   &__content {
     &_header {
       margin-bottom: 50px;
+
+      @include tablet_sm {
+        margin-bottom: 30px;
+      }
+
+      @include mobile {
+        margin-bottom: 5px;
+      }
     }
 
     &_description {
       display: flex;
+
+      @include mobile {
+        display: flex;
+        flex-direction: column;
+      }
     }
 
     &_play-btn {
@@ -37,13 +58,23 @@
       @include tablet_md {
         width: 60px;
       }
+
+      @include mobile {
+        height: 45px;
+      }
+
+      &_icon {
+        @include mobile {
+          width: 50px;
+        }
+      }
     }
 
     &_info {
       width: 245px;
       @include font($font-regular, 14px, 24px, $gray);
       font-weight: 300;
-      text-shadow: 0.5px 0.5px 0.5px #f8f8f8;
+      text-shadow: 0.4px -0.4px 0.4px #f8f8f8;
 
       @include tablet {
         font-size: 13px;
@@ -61,6 +92,13 @@
         line-height: 16px;
         width: 160px;
         padding-top: 10px;
+      }
+      @include mobile {
+        line-height: 14px;
+      }
+      @include mobile_md {
+        line-height: 12px;
+        width: 150px;
       }
     }
   }

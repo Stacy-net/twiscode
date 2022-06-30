@@ -8,11 +8,20 @@
       max-width: 620px;
       padding: 30px 25px;
     }
+
+    @include mobile {
+      max-width: 360px;
+      padding: 20px;
+    }
   }
 
   &__header {
     padding-bottom: 40px;
     text-align: center;
+
+    @include mobile {
+      padding-bottom: 20px;
+    }
   }
 
   &__list1 {
@@ -20,5 +29,11 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+
+    &_item {
+      @include mobile {
+        width: 100px;
+      }
+    }
   }
 }

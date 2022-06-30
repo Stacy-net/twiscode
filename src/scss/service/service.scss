@@ -3,6 +3,10 @@
   display: flex;
   margin: 60px 0;
 
+  @include mobile {
+    margin: 30px 0;
+  }
+
   &__container {
     position: absolute;
     top: 50%;
@@ -37,6 +41,10 @@
     @include tablet_sm {
       width: 300px;
     }
+    @include mobile {
+      padding: 10px 20px;
+      width: 260px;
+    }
     &_header {
       padding-top: 30px;
 
@@ -45,6 +53,10 @@
       }
       @include tablet_md {
         padding-top: 15px;
+      }
+
+      @include mobile {
+        padding-top: 5px;
       }
     }
 
@@ -65,6 +77,15 @@
       @include tablet_sm {
         font-size: 14px;
       }
+      @include mobile {
+        padding: 10px 0px;
+      }
+
+      @include mobile_md {
+        padding: 10px 2px;
+        font-size: 12px;
+        line-height: 14px;
+      }
     }
 
     &_btn {
@@ -79,6 +100,13 @@
       @include tablet_sm {
         padding: 10px 25px;
         font-size: 13px;
+      }
+      @include mobile {
+        padding: 10px 15px;
+      }
+      @include mobile_md {
+        font-size: 12px;
+        padding: 8px 10px;
       }
     }
   }

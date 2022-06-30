@@ -7,6 +7,10 @@
     @include tablet {
       padding: 30px 25px;
     }
+
+    @include mobile {
+      padding: 20px;
+    }
   }
 
   &__header {
@@ -33,13 +37,22 @@
       &:not(:last-child) {
         margin-right: 10px;
       }
+
       @include tablet_md {
         width: 90%;
+      }
+
+      @include mobile {
+        width: 60%;
       }
     }
 
     &_teammate-name {
       padding: 10px 0;
+
+      @include mobile {
+        padding: 5px 0;
+      }
     }
 
     &_teammate-position {
@@ -53,6 +66,12 @@
       @include tablet_sm {
         padding-bottom: 15px;
         font-size: 14px;
+      }
+
+      @include mobile {
+        font-size: 12px;
+        line-height: 16px;
+        padding-bottom: 10px;
       }
     }
   }

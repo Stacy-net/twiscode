@@ -13,6 +13,12 @@
     @include tablet_md {
       height: 80px;
     }
+    @include tablet_sm {
+      height: 60px;
+    }
+    @include mobile {
+      padding: 0 20px;
+    }
 
     .header__content_nav_btn {
       @include font($font-medium, 14px, 24px, $black);
@@ -33,6 +39,12 @@
       &:hover {
         text-decoration: none;
       }
+    }
+  }
+
+  &__logo {
+    @include mobile {
+      width: 100px;
     }
   }
 
@@ -119,10 +131,17 @@
   .burger-menu__nav_item {
     display: block;
     @include font($font-medium, 14px, 12px, $black);
+    text-shadow: -0.4px -0.4px 0.4px #f8f8f8;
     margin-bottom: 18px;
     width: 100px;
     transition: 0.3s;
     position: relative;
     z-index: 3;
+
+    @include mobile {
+      font-size: 12px;
+      line-height: 12px;
+      margin-bottom: 7px;
+    }
   }
 }
