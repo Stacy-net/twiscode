@@ -38,7 +38,7 @@ h1 {
   }
 }
 h2 {
-  @include font($font-bold, 34px, 45px, $gray);
+  @include font($font-bold, 36px, 45px, $gray);
 
   @include tablet {
     font-size: 32px;
@@ -51,27 +51,68 @@ h2 {
   }
 
   @include tablet_sm {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 24px;
-  }
-  @include mobile {
-    font-size: 16px;
   }
 }
 h3 {
-  @include font($font-bold, 21px, 36px, $gray);
+  @include font($font-bold, 24px, 36px, $gray);
 
   @include tablet {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   @include tablet_md {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 21px;
   }
 
   @include tablet_sm {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 18px;
+  }
+}
+
+.font-default {
+  @include font($font-regular, 14px, 24px, $gray);
+
+  @include tablet {
+    font-size: 13;
+  }
+
+  @include tablet_md {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  @include tablet_sm {
+    font-size: 11px;
+    line-height: 16px;
+  }
+}
+
+.font-small {
+  @include font($font-regular, 12px, 24px, #5e5b5b);
+
+  @include tablet_md {
+    font-size: 11px;
+    line-height: 18px;
+  }
+}
+
+.font-big {
+  @include font($font-medium, 18px, 24px, $light-gray);
+
+  @include tablet {
+    font-size: 16px;
+  }
+
+  @include tablet_sm {
+    font-size: 14px;
+  }
+
+  @include mobile_md {
+    font-size: 12px;
+    line-height: 14px;
   }
 }

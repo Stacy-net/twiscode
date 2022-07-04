@@ -11,7 +11,8 @@
 
     @include mobile {
       @include flex(space-between, center, column);
-      padding: 20px 40px;
+      padding: 20px;
+      max-width: 400px;
     }
   }
 
@@ -42,14 +43,20 @@
 
     @include mobile {
       order: 1;
-      margin: 0 auto;
-      width: 60%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding-bottom: 20px;
     }
 
     &_image {
       width: 100%;
       box-shadow: 0px 4px 30px #e5e5e5;
       border-radius: 10px;
+
+      @include mobile {
+        display: none;
+      }
     }
 
     &_title {
@@ -59,11 +66,17 @@
       padding: 20px 32px;
       @include font($font-regular, 18px, 20px, $black);
       background: $white;
+      border: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
 
       @include mobile {
         font-size: 14px;
         line-height: 16px;
         padding: 10px 15px;
+        width: 100%;
       }
     }
   }
@@ -104,18 +117,7 @@
 
     &_info {
       padding-left: 30px;
-      @include font($font-regular, 12px, 24px, $gray);
-      color: #5e5b5b;
       text-align: justify;
-
-      @include tablet_md {
-        font-size: 11px;
-        line-height: 18px;
-      }
-
-      @include tablet_sm {
-        font-size: 10px;
-      }
     }
   }
 }

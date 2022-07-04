@@ -1,4 +1,11 @@
 .header {
+  @include mobile {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    background: white;
+  }
   &__container {
     max-width: $max-width;
     height: 100px;
@@ -95,6 +102,8 @@
   }
 
   &__label {
+    position: sticky;
+    z-index: 3;
     display: flex;
     align-items: center;
     width: 26px;
@@ -121,27 +130,43 @@
   }
 
   .burger-menu__nav {
-    display: none;
-    position: absolute;
-    right: 0;
-    top: 50px;
-    text-align: end;
-    transition: 0.3s;
+    padding-top: 40px;
+    position: fixed;
+    z-index: 2;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    background: rgba($color: #fff, $alpha: 0.8);
+    overflow-y: auto;
+    right: -100%;
+
+    @include mobile {
+      padding-top: 15px;
+    }
   }
+
+  .burger-menu_active .burger-menu__nav {
+    right: 0;
+  }
+
   .burger-menu__nav_item {
     display: block;
     @include font($font-medium, 14px, 12px, $black);
     text-shadow: -0.4px -0.4px 0.4px #f8f8f8;
-    margin-bottom: 18px;
+    padding: 10px;
     width: 100px;
     transition: 0.3s;
     position: relative;
     z-index: 3;
 
+    &:hover {
+      color: $light-gray;
+    }
+
     @include mobile {
+      width: 80px;
       font-size: 12px;
       line-height: 12px;
-      margin-bottom: 7px;
     }
   }
 }

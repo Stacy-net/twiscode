@@ -4,6 +4,10 @@
   margin-bottom: 60px;
 
   @include mobile {
+    margin-top: 60px;
+  }
+
+  @include mobile {
     margin-bottom: 20px;
   }
 
@@ -72,24 +76,18 @@
 
     &_info {
       width: 245px;
-      @include font($font-regular, 14px, 24px, $gray);
       font-weight: 300;
       text-shadow: 0.4px -0.4px 0.4px #f8f8f8;
 
       @include tablet {
-        font-size: 13px;
         width: 210px;
       }
 
       @include tablet_md {
-        font-size: 11px;
-        line-height: 20px;
         width: 190px;
       }
 
       @include tablet_sm {
-        font-size: 10px;
-        line-height: 16px;
         width: 160px;
         padding-top: 10px;
       }

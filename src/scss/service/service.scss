@@ -63,10 +63,8 @@
     &_info {
       padding: 30px 0;
       width: 240px;
-      @include font($font-medium, 18px, 24px, $light-gray);
 
       @include tablet {
-        font-size: 16px;
         padding: 20px 0;
       }
 
@@ -74,17 +72,12 @@
         padding: 15px 0;
       }
 
-      @include tablet_sm {
-        font-size: 14px;
-      }
       @include mobile {
         padding: 10px 0px;
       }
 
       @include mobile_md {
         padding: 10px 2px;
-        font-size: 12px;
-        line-height: 14px;
       }
     }
 
@@ -96,17 +89,19 @@
       &:hover {
         background: $light-gray;
       }
+      @include tablet {
+        padding: 12px 24px;
+      }
 
       @include tablet_sm {
-        padding: 10px 25px;
+        padding: 12px 16px;
         font-size: 13px;
       }
       @include mobile {
-        padding: 10px 15px;
+        padding: 6px 12px;
       }
       @include mobile_md {
         font-size: 12px;
-        padding: 8px 10px;
       }
     }
   }

@@ -9,6 +9,15 @@
       padding: 30px 25px;
     }
 
+    @include tablet_md {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    @include tablet_sm {
+      @include flex(center, center, column);
+    }
+
     @include mobile {
       padding: 20px;
     }
@@ -127,18 +136,8 @@
     margin-right: 20px;
     flex-shrink: 0;
 
-    // @include tablet {
-    //   padding-right: 18px;
-    //   width: 100px;
-    // }
-
-    @include mobile {
-      padding-right: 12px;
-      width: 70px;
-    }
-
-    @include mobile_md {
-      width: 65px;
+    @include tablet_md {
+      display: none;
     }
 
     &_list_item {
@@ -181,18 +180,24 @@
       width: 185px;
     }
 
-    @include tablet_md {
-      width: 160px;
-    }
-
-    @include tablet_sm {
-      width: 150px;
-    }
-
     @include mobile {
       width: 130px;
     }
 
+    &_list {
+      @include tablet_sm {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+    }
+
+    &_title {
+      @include tablet_sm {
+        text-align: center;
+        padding-top: 10px;
+      }
+    }
     &_link {
       padding: 8px 0;
 
@@ -208,40 +213,56 @@
       @include tablet_md {
         font-size: 14px;
         line-height: 24px;
-        padding: 6px 0;
+        padding: 6px 0px;
       }
 
       @include tablet_sm {
         font-size: 12px;
         line-height: 21px;
+        padding: 6px;
+
+        &:not(:last-child) {
+          margin-right: 50px;
+        }
       }
 
       @include mobile {
         font-size: 11px;
         line-height: 16px;
       }
+
       &_icon {
         padding-right: 10px;
 
-        @include tablet_md {
-          padding-right: 5px;
+        @include mobile {
+          padding-right: 3px;
         }
 
-        @include tablet_sm {
-          width: 18px;
+        svg {
+          width: 20px;
+          height: 20px;
+
+          &:hover {
+            stroke: $white;
+          }
         }
       }
+
       &_label {
         position: relative;
-        bottom: 5px;
+        bottom: 3px;
 
         &:hover {
           text-decoration: underline;
           color: $gray;
         }
 
-        @include mobile {
-          bottom: 1px;
+        @include tablet_sm {
+          bottom: -1px;
+        }
+
+        @include mobile_md {
+          display: none;
         }
       }
     }
